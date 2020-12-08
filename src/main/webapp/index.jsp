@@ -13,6 +13,15 @@
     <link rel="stylesheet" type="text/css" href="mycss.css">
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg">
+        <button type="button" class="btn btn-outline-primary topbtn" href="index.jsp">
+            <a href="index.jsp">主页</a>
+        </button>
+        <button type="button" class="btn btn-outline-primary topbtn" href="car.jsp">
+            <a href="car.jsp">购物车</a>
+        </button>
+    </nav>
+
     <div class="container">
         <div class="row justify-content-center">
             <div class="col col-2">
@@ -35,5 +44,11 @@
 
         </div>
     </div>
+
+
+
 </body>
 </html>
+<script>
+
+</script>
