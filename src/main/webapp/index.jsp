@@ -5,6 +5,7 @@
   Time: 20:38
   To change this template use File | Settings | File Templates.
 --%>
+<%@ page import="java.util.ArrayList,Product" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -26,6 +27,10 @@
 
         <div class="row">
             <div class="col-4">
+                <%
+                    ArrayList<Product> list=(ArrayList<Product>)application.getAttribute("list");
+                    for (Product product:list)
+                %>
                 <div class="card">
                     <img class="card-img-top" src="https://img10.360buyimg.com/n1/s450x450_jfs/t1/96127/30/8596/71921/5e05d2d3Eea057f1e/e596ae07921c890d.jpg">
                     <div class="card-body">
