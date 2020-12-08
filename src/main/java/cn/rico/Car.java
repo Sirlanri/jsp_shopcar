@@ -1,10 +1,12 @@
+package cn.rico;
+
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 
 public class Car {
     //用商品名作为id，省了个参数
-    HashMap<String,Goods>items=null;
+    HashMap<String, Goods>items=null;
     public Car(){
         items=new HashMap<String, Goods>();
     }
@@ -38,7 +40,7 @@ public class Car {
     //计算价格总和
     public double getTotal(){
         double count=0;
-        for (Iterator<Goods> i=getItems().iterator();i.hasNext();){
+        for (Iterator<Goods> i = getItems().iterator(); i.hasNext();){
             Goods item =(Goods)i.next();
             Product product=(Product)item.getProduct();
             count+=product.price;

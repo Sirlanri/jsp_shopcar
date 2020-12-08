@@ -1,3 +1,5 @@
+package cn.rico;
+
 import java.io.Serializable;
 
 public class Goods implements Serializable  {
@@ -7,7 +9,7 @@ public class Goods implements Serializable  {
         this.product=product;
         number=1;
     }
-    public Goods(Product product,int number){
+    public Goods(Product product, int number){
         this.product=product;
         this.number=number;
     }
