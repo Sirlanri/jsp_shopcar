@@ -24,24 +24,16 @@
     <a href="car.jsp" class="btn btn-outline-primary topbtn">购物车</a>
 </nav>
 <%
-    if (session.getAttribute("car")!=null){
-        Car car=(Car)session.getAttribute("car");
-        ArrayList<Goods>items=new ArrayList<Goods>(car.getItems());
-    }else {
-        ArrayList<Goods>items=null;
-    }
-
+    Car car=(Car)session.getAttribute("car");
+    ArrayList<Goods>items=new ArrayList<Goods>(car.getItems());
 %>
 <div class="container">
     <div class="row">
         <%
-            if (session.getAttribute("car")!=null){
-                for (Goods goods:items){
-                    Product product=goods.getProduct();
-            }
-
+            for (Goods goods:items){
+                Product product=goods.getProduct();
         %>
-        <div class="col-4" >
+        <div class="col-4">
             <div class="card">
                 <img class="card-img-top" src="<%=product.img %>">
                 <div class="card-body">
