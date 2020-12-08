@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class Methods extends HttpServlet {
     ServletContext context;
 
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException{
         String uri=request.getRequestURI();
         if (uri.endsWith("/addToCar")){
             String name="";
