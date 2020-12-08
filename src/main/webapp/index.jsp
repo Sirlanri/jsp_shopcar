@@ -14,22 +14,16 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <button type="button" class="btn btn-outline-primary topbtn" href="index.jsp">
-            <a href="index.jsp">主页</a>
-        </button>
-        <button type="button" class="btn btn-outline-primary topbtn" href="car.jsp">
-            <a href="car.jsp">购物车</a>
-        </button>
+        <div class="alert alert-primary " style="margin-right: 3rem">
+            商城主页
+        </div>
+        <a href="index.jsp" class="btn btn-outline-primary topbtn">主页</a>
+        <a href="car.jsp" class="btn btn-outline-primary topbtn">购物车</a>
+
     </nav>
 
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col col-2">
-                <div class="alert alert-primary " style="font-size: x-large">
-                    商城主页
-                </div>
-            </div>
-        </div>
+
         <div class="row">
             <div class="col-4">
                 <div class="card">

@@ -14,12 +14,11 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <button type="button" class="btn btn-outline-primary topbtn" href="index.jsp">
-        <a href="index.jsp">主页</a>
-    </button>
-    <button type="button" class="btn btn-outline-primary topbtn" href="car.jsp">
-        <a href="car.jsp">购物车</a>
-    </button>
+    <div class="alert alert-primary " style="margin-right: 3rem">
+        购物车
+    </div>
+    <a href="index.jsp" class="btn btn-outline-primary topbtn">主页</a>
+    <a href="car.jsp" class="btn btn-outline-primary topbtn">购物车</a>jsp">购物车</a>
 </nav>
 
 </body>
