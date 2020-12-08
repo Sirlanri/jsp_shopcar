@@ -26,21 +26,29 @@
     <div class="container">
 
         <div class="row">
+            <%
+                ArrayList<Product> list=(ArrayList<Product>)application.getAttribute("list");
+                for (Product product:list){
+            %>
             <div class="col-4">
-                <%
-                    ArrayList<Product> list=(ArrayList<Product>)application.getAttribute("list");
-                    for (Product product:list)
-                %>
+
                 <div class="card">
-                    <img class="card-img-top" src="https://img10.360buyimg.com/n1/s450x450_jfs/t1/96127/30/8596/71921/5e05d2d3Eea057f1e/e596ae07921c890d.jpg">
+                    <img class="card-img-top" src="<%=product.img %>">
                     <div class="card-body">
-                        <div class="card-title">OPPO reno3</div>
-                        <div class="card-text">OPPO Reno3 Pro 双模5G 视频双防抖 90HZ高感曲面屏 7.7mm轻薄机身 12GB+256GB 雾月白全网通游戏视频手机</div>
+                        <div class="card-title">
+                            <%=product.name%>
+                            <div class="price"><%=product.price%></div>
+                        </div>
+
+                        <div class="card-text"><%=product.detail%></div>
                         <button type="button" class="btn btn-outline-secondary addbtn">加入购物车</button>
                     </div>
                 </div>
-            </div>
 
+            </div>
+            <%
+                }
+            %>
         </div>
     </div>
 
