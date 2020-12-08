@@ -5,11 +5,11 @@
   Time: 20:38
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page import="java.util.ArrayList,cn.rico.Product" %>
+<%@ page import="java.util.ArrayList,cn.rico.*" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Rico</title>
     <link rel="stylesheet" type="text/css" href="boot/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="mycss.css">
 </head>
