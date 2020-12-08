@@ -11,5 +11,11 @@ public class ProductsListener implements ServletContextListener {
     public void contextInit(ServletContextEvent sce){
         ArrayList<Product>products=new ArrayList<Product>();
         products.add(new Product("OPPO reno3",2899));
+        context=sce.getServletContext();
+        context.setAttribute("list",products);
+    }
+    public void contextDestryed(ServletContextEvent sce){
+        context=sce.getServletContext();
+        context.removeAttribute("list");
     }
 }
