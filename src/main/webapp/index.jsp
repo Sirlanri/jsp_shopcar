@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="mycss.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <button type="button" class="btn btn-outline-primary topbtn" href="index.jsp">
             <a href="index.jsp">主页</a>
         </button>
