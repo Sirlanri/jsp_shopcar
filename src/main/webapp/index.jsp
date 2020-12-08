@@ -41,8 +41,8 @@
                         </div>
 
                         <div class="card-text"><%=product.detail%></div>
-                        <form type="hidden" name="addCar" method="post" action="addToCar">
-                            <input type="text" name="itemName">
+                        <form type="hidden" name="addCar" method="post" action="/addToCar">
+                            <input type="hidden" name="itemName" value="<%=product.name%>">
                             <input type="submit" value="加入购物车" class="btn btn-outline-secondary topmargin">
                         </form>
                     </div>

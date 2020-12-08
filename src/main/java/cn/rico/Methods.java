@@ -23,16 +23,44 @@ public class Methods extends HttpServlet {
             }catch (Exception e){
                 System.out.println("后端提取item名字出错");
             }
-            Product product=getProduct("");
+            //加入一件物品到购物车
+            Product product = getProduct(name);
+            if (product!=null){
+                Goods goods=new Goods(product);
+                HttpSession session=request.getSession();
+                Car car = (Car)session.getAttribute("car");
+                if (car==null){
+                    car = new Car();
+                    session.setAttribute("car",car);
+                }
+                car.add(goods);
+            }
+
         }else if (uri.endsWith("/delItem")){
             delItem(request,response);
         }
     }
 
+
+
     private void delItem(HttpServletRequest request, HttpServletResponse response) throws IOException {
         HttpSession session=request.getSession();
         //购物车：session-car
         Car car = (Car)session.getAttribute("car");
+        try {
+            String name=(String)request.getAttribute("itemName");
+            Goods item=null;
+            for (Goods shopItem:car.getItems()){
+                if (shopItem.getProduct().name==name){
+                    item=shopItem;
+                    break;
+                }
+            }
+            car.remove(item.getProduct().name);
+        }catch (Exception e){
+            System.out.println("删除物品出错"+e.getMessage());
+        }
+        session.setAttribute("car",car);
     }
 
 
