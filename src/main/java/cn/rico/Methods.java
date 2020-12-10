@@ -1,7 +1,6 @@
 package cn.rico;
 
 import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -15,8 +14,9 @@ public class Methods extends HttpServlet {
     ServletContext context;
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException{
+        request.setCharacterEncoding("utf-8");
         String uri=request.getRequestURI();
-        if (uri.endsWith("/addToCar")){
+        if (uri.endsWith("addToCar")){
             String name="";
             try {
                 name=(String)request.getParameter("itemName");
@@ -34,11 +34,13 @@ public class Methods extends HttpServlet {
                     session.setAttribute("car",car);
                 }
                 car.add(goods);
+
             }
 
-        }else if (uri.endsWith("/delItem")){
+        }else if (uri.endsWith("delItem")){
             delItem(request,response);
         }
+        response.sendRedirect("car.jsp");
     }
 
 
@@ -69,7 +71,7 @@ public class Methods extends HttpServlet {
         context=getServletContext();
         ArrayList<Product> products=(ArrayList<Product>)context.getAttribute("list");
         for (Product product:products){
-            if (product.name==s){
+            if (product.name.equals(s)){
                 return product;
             }
         }

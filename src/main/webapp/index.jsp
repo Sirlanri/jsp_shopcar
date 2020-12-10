@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page import="java.util.ArrayList,cn.rico.*" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
     <title>Rico</title>
@@ -41,9 +41,11 @@
                         </div>
 
                         <div class="card-text"><%=product.detail%></div>
-                        <form type="hidden" method="post" action="/addToCar">
+                        <form type="hidden" method="post" action="addToCar">
+                            <tr>
                             <input type="hidden" name="itemName" value="<%=product.name%>">
                             <input type="submit" value="加入购物车" class="btn btn-outline-secondary topmargin">
+                            </tr>
                         </form>
                     </div>
                 </div>

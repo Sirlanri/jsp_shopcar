@@ -18,6 +18,8 @@ public class ProductsListener implements ServletContextListener {
         products.add(new Product("阿米洛机械键盘",938,"【个性定制】快速私人定制机械键盘 办公键盘 VA108键有线","https://img13.360buyimg.com//n0/jfs/t1/100616/13/2599/110353/5dd25383E3ab5cab7/d8383b1d1d5df8c2.jpg"));
         context=sce.getServletContext();
         context.setAttribute("list",products);
+
+
     }
     public void contextDestryed(ServletContextEvent sce){
         context=sce.getServletContext();

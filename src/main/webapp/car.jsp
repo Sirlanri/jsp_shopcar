@@ -25,7 +25,8 @@
 </nav>
 <%
     Car car=(Car)session.getAttribute("car");
-    ArrayList<Goods>items=new ArrayList<Goods>(car.getItems());
+    System.out.println("获取car"+session.getAttribute("car"));
+    ArrayList<Goods>items= new ArrayList<>(car.getItems());
 %>
 <div class="container">
     <div class="row">
