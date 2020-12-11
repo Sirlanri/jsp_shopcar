@@ -24,8 +24,11 @@
     <a href="car.jsp" class="btn btn-outline-primary topbtn">购物车</a>
 </nav>
 <%
+    if (session.getAttribute("car")==null){
+        response.sendRedirect("empty.jsp");
+        return;
+    }
     Car car=(Car)session.getAttribute("car");
-    System.out.println("获取car"+session.getAttribute("car"));
     ArrayList<Goods>items= new ArrayList<>(car.getItems());
 %>
 <div class="container">
@@ -42,9 +45,14 @@
                         <%=product.name%>
                         <div class="price"><%=product.price%></div>
                     </div>
-
                     <div class="card-text"><%=product.detail%></div>
-                    <button type="button" class="btn btn-outline-danger addbtn">删除商品</button>
+                    <div class="good-num">
+                        数量：<%=goods.getNumber()%>
+                    </div>
+                    <form type="hidden" method="post" action="/delItem">
+                        <input type="hidden" name="itemName" value="<%=product.name%>">
+                        <input type="submit" value="删除商品" class="btn btn-outline-danger addbtn">
+                    </form>
                 </div>
             </div>
         </div>
