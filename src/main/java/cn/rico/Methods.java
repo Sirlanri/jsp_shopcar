@@ -50,10 +50,10 @@ public class Methods extends HttpServlet {
         //购物车：session-car
         Car car = (Car)session.getAttribute("car");
         try {
-            String name=(String)request.getAttribute("itemName");
+            String name=(String)request.getParameter("itemName");
             Goods item=null;
             for (Goods shopItem:car.getItems()){
-                if (shopItem.getProduct().name==name){
+                if (shopItem.getProduct().name.equals(name)){
                     item=shopItem;
                     break;
                 }
