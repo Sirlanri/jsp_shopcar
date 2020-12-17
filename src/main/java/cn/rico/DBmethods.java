@@ -58,4 +58,11 @@ public class DBmethods extends HttpServlet {
             }
         }
     }
+    public void destroy(){
+        try {
+            dbconn.close();
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
 }
