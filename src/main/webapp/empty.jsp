@@ -15,10 +15,11 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="alert alert-primary " style="margin-right: 3rem">
-        商城主页
+        购物车
     </div>
     <a href="index.jsp" class="btn btn-outline-primary topbtn">主页</a>
     <a href="car.jsp" class="btn btn-outline-primary topbtn">购物车</a>
+    <a href="https://whisper.ri-co.cn" class="btn btn-outline-primary topbtn">友链</a>
 </nav>
 <div class="container">
     <div class="row justify-content-center">

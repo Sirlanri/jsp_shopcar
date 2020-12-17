@@ -41,7 +41,7 @@ public class ProductsListener implements ServletContextListener {
             while (result.next()){
                 Product product= new Product();
                 product.name=result.getString("name");
-                product.img=result.getString("img");
+                product.img=result.getString("pic");
                 product.detail=result.getString("detail");
                 product.price=result.getDouble("price");
                 products.add(product);

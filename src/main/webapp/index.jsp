@@ -20,6 +20,7 @@
         </div>
         <a href="index.jsp" class="btn btn-outline-primary topbtn">主页</a>
         <a href="car.jsp" class="btn btn-outline-primary topbtn">购物车</a>
+        <a href="https://whisper.ri-co.cn" class="btn btn-outline-primary topbtn">友链</a>
 
     </nav>
 
