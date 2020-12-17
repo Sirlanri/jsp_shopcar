@@ -6,9 +6,9 @@
         maxTotal="4"
         maxIdle="2"
         driverClassName="com.mysql.cj.jdbc.Driver"
-        url="jdbc:mysql://127.0.0.1:3306/shopcar"
-        username="jsp"
-        passoword="123456"
+        url="jdbc:mysql://127.0.0.1:3306/shopcar?useSSL=false"
+        username="root"
+        password="123456"
         maxWaitMillis="5000"
     />
 
