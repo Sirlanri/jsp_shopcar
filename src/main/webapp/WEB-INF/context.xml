@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Context reload="true">
     <Resource
-        name="jsp1"
+        name="jdbc/jsp1"
         type="javax.sql.DataSource"
         maxTotal="4"
         maxIdle="2"

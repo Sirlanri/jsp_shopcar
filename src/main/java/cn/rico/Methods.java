@@ -43,10 +43,6 @@ public class Methods extends HttpServlet {
         response.sendRedirect("car.jsp");
     }
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException{
-
-    }
-
 
 
     private void delItem(HttpServletRequest request, HttpServletResponse response) throws IOException {
